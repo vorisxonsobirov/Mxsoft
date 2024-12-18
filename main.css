@@ -69,6 +69,7 @@
    .right{
     display: none;
    }
+
 }
 @media screen and (max-width:850px) {
   .header{
@@ -78,10 +79,30 @@
     align-items: center;
     padding-top: 20px;
   }
+  .mt200{
+    margin-top: 400px;
+  }
   .left{
     gap: 10px;
   }
   .left a{
     font-size: 17px;
   }
+}
+@media screen and (max-width:600px) {
+    .left a{
+        display: none;
+    }    
+    .right{
+        display: block;
+    }
+    .right p{
+        font-size: 15px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
 }
