@@ -64,3 +64,24 @@
 /* li{
     align-items: center;
 } */
+
+@media screen and (max-width:1060px) {
+   .right{
+    display: none;
+   }
+}
+@media screen and (max-width:850px) {
+  .header{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  .left{
+    gap: 10px;
+  }
+  .left a{
+    font-size: 17px;
+  }
+}
