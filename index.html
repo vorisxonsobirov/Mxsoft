@@ -2,6 +2,8 @@
 <html lang="en">
    <head>
       <!-- basic -->
+      <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv1E2k9jXpwGSpd4dh6zY8zoZgwl-4U-L1Sw&s">
+
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
@@ -308,54 +310,75 @@
                </div>
             </div>
          </div>
-         <div class="con_bg">
-            <div class="container-fluid">
-               <div class="row">
-                  <div class="col-md-6">
-                     <form id="request" class="main_form">
-                        <div class="row">
-                           <div class="col-md-12 ">
-                              <input class="contactus" placeholder="Name" type="type" name="Name"> 
+            <div class="con_bg">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <form id="request" class="main_form">
+                           <div class="row">
+                             <div class="col-md-12">
+                               <input class="contactus" placeholder="Name" type="text" id="name" name="Name">
+                             </div>
+                             <div class="col-md-12">
+                               <input class="contactus" placeholder="Email" type="text" id="email" name="Email">
+                             </div>
+                             <div class="col-md-12">
+                               <input class="contactus" placeholder="Phone Number" type="text" id="phone" name="Phone">
+                             </div>
+                             <div class="col-md-12">
+                               <input class="contactusmess" placeholder="Message" type="text" id="message" name="Message">
+                             </div>
+                             <div class="col-md-12">
+                               <button type="button" class="send_btn" id="sendButton">Send</button>
+                             </div>
                            </div>
-                           <div class="col-md-12">
-                              <input class="contactus" placeholder="Email" type="type" name="Email"> 
+                         </form>
+                         
+                        
+                        <script>
+                           document.getElementById('sendButton').addEventListener('click', async () => {
+                              const name = document.getElementById('name').value;
+                              const email = document.getElementById('email').value;
+                              const phone = document.getElementById('phone').value;
+                              const message = document.getElementById('message').value;
+                     
+                              if (!name || !email || !phone || !message) {
+                                 alert('Заполните все поля!');
+                                 return;
+                              }
+                     
+                              try {
+                                 const response = await fetch('http://localhost:3000/submit', {
+                                    method: 'POST',
+                                    headers: {
+                                       'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify({ name, email, phone, message }),
+                                 });
+                     
+                                 const result = await response.json();
+                     
+                                 if (response.ok) {
+                                    alert('Данные успешно отправлены!');
+                                 } else {
+                                    alert('Ошибка: ' + result.message);
+                                 }
+                              } catch (error) {
+                                 alert('Ошибка отправки данных: ' + error.message);
+                              }
+                           });
+                        </script>
+                        
+                     </div>
+                     <div class="col-md-6 padding_right2">
+                        <div class="map_section">
+                           <div id="map">
                            </div>
-                           <div class="col-md-12">
-                              <input class="contactus" placeholder="Phone Number" type="type" name="Phone Number">                          
-                           </div>
-                           <div class="col-md-12">
-                              <input class="contactusmess" placeholder="Message" type="type" Message="Name">
-                           </div>
-                           <div class="col-md-12">
-                              <button class="send_btn">Send</button>
-                           </div>
-                           <div class="col-md-12">
-                              <ul class="location_form">
-                                 <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                                    (+71) 1234567890 (+71) 1234567890
-                                 </li>
-                                 <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>demo@gmail.com</li>
-                              </ul>
-                           </div>
-                           <div class="col-md-12">
-                              <ul class="social_icon">
-                                 <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                 <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                              </ul>
-                           </div>
-                        </div>
-                     </form>
-                  </div>
-                  <div class="col-md-6 padding_right2">
-                     <div class="map_section">
-                        <div id="map">
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-         </div>
       </div>
       <!-- end contact section -->
       <!-- testimonial section -->
@@ -528,6 +551,7 @@
       <!-- google map js -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
       <!-- end google map js --> 
+      <script src="./main.js"></script>
    </body>
 </html>
 
