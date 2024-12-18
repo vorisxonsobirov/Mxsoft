@@ -335,39 +335,45 @@
                          </form>
                          
                         
-                        <script>
-                           document.getElementById('sendButton').addEventListener('click', async () => {
-                              const name = document.getElementById('name').value;
-                              const email = document.getElementById('email').value;
-                              const phone = document.getElementById('phone').value;
-                              const message = document.getElementById('message').value;
-                     
-                              if (!name || !email || !phone || !message) {
-                                 alert('Заполните все поля!');
-                                 return;
-                              }
-                     
-                              try {
-                                 const response = await fetch('http://localhost:3000/submit', {
-                                    method: 'POST',
-                                    headers: {
-                                       'Content-Type': 'application/json',
-                                    },
-                                    body: JSON.stringify({ name, email, phone, message }),
-                                 });
-                     
-                                 const result = await response.json();
-                     
-                                 if (response.ok) {
-                                    alert('Данные успешно отправлены!');
-                                 } else {
-                                    alert('Ошибка: ' + result.message);
-                                 }
-                              } catch (error) {
-                                 alert('Ошибка отправки данных: ' + error.message);
-                              }
-                           });
-                        </script>
+                       <script>
+                          document.getElementById("sendButton").addEventListener("click", async function () {
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const message = document.getElementById("message").value;
+
+      // Создаем объект для отправки
+      const data = { name, email, phone, message };
+
+      try {
+        // Отправка данных на сервер
+        const response = await fetch("http://localhost:3000/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          console.log("Данные успешно отправлены в Telegram бот!");
+
+          // Очищаем поля формы
+          document.getElementById("request").reset();
+
+          // Выводим сообщение об успешной отправке
+          alert("Данные успешно отправлены!");
+        } else {
+          console.error("Ошибка при отправке данных");
+          alert("Ошибка при отправке данных!");
+        }
+      } catch (error) {
+        console.error("Ошибка отправки данных:", error);
+        alert("Ошибка отправки данных на сервер!");
+      }
+    });
+  </script>
+                       </script>
                         
                      </div>
                      <div class="col-md-6 padding_right2">
