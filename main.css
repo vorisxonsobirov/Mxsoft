@@ -116,6 +116,11 @@
     justify-content: space-between;
     align-items: center;
   }
+  .d_flex1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .img_responsive{
     width: 70px;
     height: 70px;
@@ -124,7 +129,9 @@
     display: none;
   }
   /* MEDIA QUERIES */
-  
+  .software{
+    padding: 40px 0px;
+  }
   @media screen and (max-width:1264px) {
     .nav__menu__link{
         font-size: 18px;
