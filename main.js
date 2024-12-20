@@ -9,7 +9,7 @@ const PORT = 3000;
 // Ваш токен бота
 const botToken = '7916610016:AAFFD8YefmuKm6w0gg89qJ1c0eAuYvdiy6s'; // Используйте свой токен
 // chat_id вашей группы (например, -1234567890)
-const chatId = '-4610291239'; // Убедитесь, что это правильный chat_id вашей группы
+const chatId = '1723957261'; // Убедитесь, что это правильный chat_id вашей группы
 
 app.use(bodyParser.json());
 app.use(cors()); // Подключение CORS
@@ -42,7 +42,7 @@ app.post('/submit', async (req, res) => {
     // Отправляем данные в Telegram
     await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       chat_id: chatId,
-      text,
+      text: text,
     });
 
     // Уведомление об успешной отправке
@@ -73,8 +73,6 @@ const menu = document.querySelector(".nav__menu");
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
   hamburger.classList.toggle("active");
-//   hamburger.style.display = block();
-//   menu.style.display = block();
 });
 
 // Закрытие меню при клике на ссылку
