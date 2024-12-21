@@ -47,8 +47,12 @@ body {
   margin: 0 auto;
   align-items: center;
 }
-
-
+/* .about_right{
+  border: 1px solid #1C0066;
+} */
+.bolt{
+  font-weight: 700;
+}
 
 .read_more{
   font-weight: 900;
