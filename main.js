@@ -51,3 +51,11 @@ app.post('/submit', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Сервер запущен на http://localhost:${PORT}`);
 });
+
+
+
+
+const corsOptions = {
+  origin: '*', // Разрешить все домены (для разработки)
+};
+app.use(cors(corsOptions)); // Убедитесь, что CORS настроен правильно
