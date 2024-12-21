@@ -21,10 +21,6 @@
 
 
 
-.logo_1{
-  width: 150px;
-  height: 150px;
-}
   .header{
     display: flex;
     justify-content: space-between;
@@ -36,13 +32,22 @@
   }
   
   .nav__logo{
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
 
   }
 
 
-  
+ .link_forTG{
+    padding: 5px;
+    background-color: #fff;
+    align-items: center;
+    display: flex;
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+    justify-content: center;
+ } 
   
   
   
@@ -50,7 +55,7 @@
   body {
     margin: 0;
     padding: 0;
-    max-width: 1440px;
+    max-width: 1920px;
     width: 100%;
     box-sizing: border-box;
     overflow-x: hidden; /* Убираем горизонтальный скролл */

@@ -7,14 +7,14 @@ const app = express();
 const PORT = 3000;
 
 // Ваш токен бота
-const botToken = '7916610016:AAFFD8YefmuKm6w0gg89qJ1c0eAuYvdiy6s'; // Используйте свой токен
-// chat_id вашей группы (например, -1234567890)
-const chatId = '1723957261'; // Убедитесь, что это правильный chat_id вашей группы
+const botToken = '7916610016:AAFFD8YefmuKm6w0gg89qJ1c0eAuYvdiy6s'; // Замени на свой токен
+// chat_id вашей группы
+const chatId = '1723957261'; // Замени на ID своей группы
 
 app.use(bodyParser.json());
-app.use(cors()); // Подключение CORS
+app.use(cors());
 
-// Обработчик POST-запроса от формы
+// Обработчик POST-запроса
 app.post('/submit', async (req, res) => {
   const { name, email, phone, message } = req.body;
 
@@ -22,13 +22,11 @@ app.post('/submit', async (req, res) => {
     return res.status(400).json({ message: 'Все поля обязательны для заполнения!' });
   }
 
-  // Получаем текущее время
   const currentTime = new Date().toLocaleString("ru-RU", {
-    timeZone: "Asia/Tashkent", // Указываем нужный часовой пояс
+    timeZone: "Asia/Tashkent",
     hour12: false,
   });
 
-  // Формируем сообщение для Telegram
   const text = `
 📝 Новая заявка:
 👤 Имя: ${name}
@@ -39,13 +37,10 @@ app.post('/submit', async (req, res) => {
   `;
 
   try {
-    // Отправляем данные в Telegram
     await axios.post(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       chat_id: chatId,
       text: text,
     });
-
-    // Уведомление об успешной отправке
     res.json({ message: 'Данные успешно отправлены в Telegram!' });
   } catch (error) {
     console.error('Ошибка отправки в Telegram:', error.message);
@@ -53,40 +48,6 @@ app.post('/submit', async (req, res) => {
   }
 });
 
-// Запуск сервера
 app.listen(PORT, () => {
   console.log(`Сервер запущен на http://localhost:${PORT}`);
-});
-
-
-
-
-
-
-
-
-// Находим элементы
-const hamburger = document.querySelector(".nav__hamburger");
-const menu = document.querySelector(".nav__menu");
-
-// Открытие/закрытие меню
-hamburger.addEventListener("click", () => {
-  menu.classList.toggle("active");
-  hamburger.classList.toggle("active");
-});
-
-// Закрытие меню при клике на ссылку
-document.querySelectorAll(".nav__menu__link a").forEach((link) => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("active");
-    hamburger.classList.remove("active");
-  });
-});
-
-// Отслеживаем размер экрана, чтобы скрыть меню при ресайзе
-window.addEventListener("resize", () => {
-  if (window.innerWidth > 768) {
-    menu.classList.remove("active");
-    hamburger.classList.remove("active");
-  }
 });
