@@ -30,7 +30,7 @@ body {
   display: flex;
   justify-content: space-between;
   /* width: 1294px; */
-  width: 1440px;
+  width: 100%;
   align-items: center;
   backdrop-filter: blur(5px);
   height: 70px;
@@ -57,7 +57,10 @@ body {
 }
 
 
-
+.w200h200{
+  width: 100px;
+  height: 300px;
+}
 
 
 
