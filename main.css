@@ -7,13 +7,16 @@
 body {
   margin: 0;
   padding: 0;
-  max-width: 1440px;
+  max-width: 1920px;
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden; /* Убираем горизонтальный скролл */
   font-family: "Lato", serif;
   margin: 0 auto;
+  /* display: flex; */
+  /* justify-content: center; */
 }
+
 /* .main-layout{
   max-width: 1920px;
   width: 1366px;
@@ -22,12 +25,14 @@ body {
 .header{
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  /* width: 1294px; */
+  width: 1113px;
   align-items: center;
   backdrop-filter: blur(5px);
   height: 70px;
   position: fixed;
   background-color: #1C0066;
+  margin: 0 auto;
   /* box-shadow: 10px 10px 10px #1C0066; */
 }
 .restrictions_for_header{
