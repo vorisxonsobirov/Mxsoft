@@ -56,3 +56,13 @@ app.post('/submit', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Сервер запущен на http://localhost:${PORT}`);
 });
+
+
+
+const corsOptions = {
+  origin: '*', // Разрешает доступ с любых доменов
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type',
+};
+
+app.use(cors(corsOptions)); // Используем с настраиваемыми опциями
