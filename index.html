@@ -45,7 +45,7 @@
                <ul>
                   <li class="nav__menu__link"><a href="#about">Maxsulot haqida</a></li>
                   <li class="nav__menu__link"><a href="#afzalliklari">Afzalliklari</a></li>
-                  <li class="nav__menu__link"><a href="#nimaUchunBiz">Nima uchun biz?</a></li>
+                  <li class="nav__menu__link"><a href="#nimaUchunBiz">Nima uchun biz ?</a></li>
                   <li class="nav__menu__link"><a href="#Bizning">Bizning hamkorlarimiz</a></li>
                   <li class="nav__menu__link"><a href="#footer">+998 98 576 12 59</a></li>
                </ul>
@@ -307,7 +307,7 @@
                      <div class="card">
                         <img src="./LOGO/blue and fiolet.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                           <h5 class="card-title">LionPrint</h5>
+                           <h5 class="card-title">Hamkor</h5>
                         </div>
                      </div>
                   </div>
@@ -315,7 +315,7 @@
                      <div class="card">
                         <img src="./LOGO/blue and fiolet.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
-                           <h5 class="card-title">LionPrint</h5>
+                           <h5 class="card-title">Sadaf</h5>
                         </div>
                      </div>
                   </div>
@@ -379,40 +379,40 @@
          </div>
 
          <script>
-            document.getElementById("sendButton").addEventListener("click", async function () {
-               const name = document.getElementById("name").value;
-               const email = document.getElementById("email").value;
-               const phone = document.getElementById("phone").value;
-               const message = document.getElementById("message").value;
-
-               if (!name || !email || !phone || !message) {
-                  alert('Все поля обязательны для заполнения!');
-                  return;
-               }
-
-               const data = { name, email, phone, message };
-
-               try {
-                  const response = await fetch("http://localhost:3000/submit", {
-                     method: "POST",
-                     headers: {
-                        "Content-Type": "application/json",
-                     },
-                     body: JSON.stringify(data),
-                  });
-
-                  if (response.ok) {
-                     alert("Данные успешно отправлены в Telegram!");
-                     document.getElementById("request").reset();
-                  } else {
-                     alert("Ошибка при отправке данных.");
-                  }
-               } catch (error) {
-                  console.error("Ошибка отправки:", error);
-                  alert("Ошибка при отправке данных на сервер!");
-               }
+            document.getElementById('sendButton').addEventListener('click', async () => {
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const message = document.getElementById('message').value;
+        
+                if (!name || !email || !phone || !message) {
+                    alert('Заполните все поля!');
+                    return;
+                }
+        
+                try {
+                    const response = await fetch('http://localhost:3000/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ name, email, phone, message }),
+                    });
+        
+                    const result = await response.json();
+        
+                    if (response.ok) {
+                        alert('Данные успешно отправлены!');
+                    } else {
+                        alert('Ошибка: ' + result.message);
+                    }
+                } catch (error) {
+                    alert('Ошибка отправки данных: ' + error.message);
+                }
             });
-         </script>
+        </script>
+        
+          
       </div>
       <div id="testimonial" class="testimonial">
          <div class="container">
