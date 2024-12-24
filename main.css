@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 ::selection{
   background-color: #ffffff92;
   color: #1C0066;
@@ -10,7 +10,7 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: "Lato", serif;
+  font-family: "Montserrat", serif;
   box-sizing: border-box;
 }
 body {
@@ -21,16 +21,12 @@ body {
   box-sizing: border-box;
   overflow-x: hidden; /* Убираем горизонтальный скролл */
   font-family: "Lato", serif;
+  /* background-color: #1A0063; */
   margin: 0 auto;
   /* display: flex; */
   /* justify-content: center; */
 }
 
-/* .main-layout{
-  max-width: 1920px;
-  width: 1366px;
-  margin: 0 auto;
-} */
 .header{
   display: flex;
   justify-content: space-between;
@@ -73,12 +69,15 @@ body {
 .sponsor{
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
   align-items: center;
   /* gap: 20px; */
 }
 .img_holder{
   width: 200px;
   height: 200px;
+  margin: 0 auto;
 }
 .img_holder img{
   width: 150px;
@@ -104,8 +103,17 @@ body {
   color: red;
   transform: scale(1.1);
 }
-
-
+.d_flex_map{
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+.map{
+  padding-top: 150px;
+}
 
 
 .KPI_text{
@@ -197,6 +205,7 @@ body {
   .software{
     padding: 40px 0px;
   }
+
   @media screen and (max-width:1264px) {
     .nav__menu__link{
         font-size: 18px;
@@ -302,6 +311,10 @@ body {
   }
   .mt200{
     margin-top: 400px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
   }
   .left{
     gap: 10px;
