@@ -70,6 +70,31 @@ body {
   width: 100px;
   height: 300px;
 }
+.sponsor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 20px; */
+}
+.img_holder{
+  width: 200px;
+  height: 200px;
+}
+.img_holder img{
+  width: 150px;
+  height: 150px;
+}
+.our_partners h1{
+  font-size: 34px;
+  font-weight: 800;
+}
+.our_partners{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  padding-bottom: 20px;
+}
 
 
 
