@@ -95,6 +95,16 @@ body {
   margin-top: 100px;
   padding-bottom: 20px;
 }
+.link_forTG{
+  color: white;
+  transition: 0.2s all;
+  font-size: 27px;
+}
+.link_forTG:hover{
+  color: red;
+  transform: scale(1.1);
+}
+
 
 
 
