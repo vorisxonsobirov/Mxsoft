@@ -66,23 +66,61 @@ body {
   width: 100px;
   height: 300px;
 }
-.sponsor{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  align-items: center;
-  /* gap: 20px; */
+
+.border_radius{
+  border-radius: 20px;
 }
-.img_holder{
+.h1_margin{
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+
+
+
+.sponsor-wrapper {
+  overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
+  width: 100%; /* Контейнер занимает всю ширину */
+  position: relative; /* Для анимации */
+}
+
+.sponsor {
+  display: flex;
+  gap: 20px; /* Расстояние между картинками */
+  animation: scroll 10s linear infinite; /* Анимация бесконечного движения */
+}
+
+.img_holder {
+  flex: 0 0 auto; /* Фиксируем размер каждого элемента */
   width: 200px;
   height: 200px;
-  margin: 0 auto;
 }
-.img_holder img{
+
+.img_holder img {
   width: 150px;
   height: 150px;
 }
+
+/* Анимация прокрутки */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Начальное положение */
+  }
+  100% {
+    transform: translateX(-50%); /* Сдвиг на половину ширины блока */
+  }
+}
+
+
+
+
+
+
+
+
+
 .our_partners h1{
   font-size: 34px;
   font-weight: 800;
@@ -193,6 +231,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .con_bg{
+    height: auto;
   }
   .img_responsive{
     width: 70px;
