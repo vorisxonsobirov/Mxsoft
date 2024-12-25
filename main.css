@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", serif;
+  box-sizing: border-box;
+}
 ::selection{
   background-color: #ffffff92;
   color: #1C0066;
@@ -6,12 +12,24 @@
 ::-webkit-scrollbar{
   width: 0px;
 }
-
-*{
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", serif;
-  box-sizing: border-box;
+.MXSOFT{
+  color: #1C0066;
+}
+.h1_header{
+  font-weight: 800;
+  display: flex;
+  font-size: 60px;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
+}
+.p_header{
+  font-weight: 500;
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  color: white;
+  margin: 0 auto;
 }
 body {
   margin: 0;
@@ -72,7 +90,8 @@ body {
   font-weight: 800;
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
+  /* color: white; */
+  /* padding-bottom: 50px; */
   margin: 0 auto;
 }
 
