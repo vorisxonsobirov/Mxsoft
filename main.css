@@ -434,9 +434,11 @@ body {
 @media screen and (max-width:600px) {
   .h1_header{
     font-size: 30px;
+    width: 400px;
   }
   .p_header{
     font-size: 20px;
+    width: 400px;
   }
   .btn_holder button{
     width: 200px;
@@ -473,9 +475,11 @@ body {
   }
   .h1_header{
     font-size: 24px;
+    width: 250px;
   }
   .p_header{
     font-size: 12px;
+    width: 200px;
   }
   .btn_holder button{
     width: 150px;
