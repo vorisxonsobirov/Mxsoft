@@ -154,8 +154,29 @@ body {
   /* padding-bottom: 50px; */
   margin: 0 auto;
 }
-
-
+.btnHeader{
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  background-color: #4400ff;
+  color: rgba(255, 255, 255, 0.743);
+  font-weight: 500;
+  transition: 0.2s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.btnHeader i{
+  background-color: #4400ff52;
+  margin-top: 4px;
+}
+.btnHeader:hover{
+  color: white;
+  transform: scale(1.1);
+}
 /* .img_crm{
   width: 500px;
   height: 500px;
@@ -535,7 +556,7 @@ body {
     width: 200px;
   }
   .btn_holder button{
-    width: 150px;
+    width: 170px;
     height: 40px;
     font-size: 12px;
     padding: 2px;
