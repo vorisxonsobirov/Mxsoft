@@ -299,9 +299,15 @@ body {
   }
   
   .nav__menu__link{
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
     color: white;
+  }
+  .nav__menu__link1{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
   }
   .flex{
     display: flex;
