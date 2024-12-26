@@ -66,6 +66,28 @@ body {
   margin: 0 auto;
   align-items: center;
 }
+
+.btn_holder{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-top: 50px;
+}
+.btn_holder button{
+  width: 250px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.2s all;
+}
+.btn_holder button:hover{
+ transform: scale(1.1);
+ background-color: #4400ff;
+ color: white;
+}
+
 /* .about_right{
   border: 1px solid #1C0066;
 } */
