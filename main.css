@@ -22,6 +22,7 @@
   justify-content: center;
   color: white;
   margin: 0 auto;
+  text-align: center;
 }
 .p_header{
   font-weight: 500;
@@ -30,6 +31,7 @@
   justify-content: center;
   color: white;
   margin: 0 auto;
+  text-align: center;
 }
 body {
   margin: 0;
@@ -430,6 +432,17 @@ body {
   }
 }
 @media screen and (max-width:600px) {
+  .h1_header{
+    font-size: 30px;
+  }
+  .p_header{
+    font-size: 20px;
+  }
+  .btn_holder button{
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+  }
     .left a{
         display: none;
     }    
@@ -453,6 +466,23 @@ body {
         font-size: 12px;
         padding: 10px 5px;
     }
+}
+@media screen and (max-width:440px){
+  .btn_holder{
+    flex-direction: column;
+  }
+  .h1_header{
+    font-size: 24px;
+  }
+  .p_header{
+    font-size: 12px;
+  }
+  .btn_holder button{
+    width: 150px;
+    height: 40px;
+    font-size: 12px;
+    padding: 2px;
+  }
 }
 @media screen and (max-width:378px) {
     .software_img{
