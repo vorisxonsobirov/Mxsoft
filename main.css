@@ -61,6 +61,7 @@ body {
   justify-content: center;
   width: 50%; /* Половина экрана для текста */
   z-index: 11;
+  backdrop-filter: blur(5px);
 }
 
 .img_banner1{
@@ -72,7 +73,7 @@ body {
   z-index: 1;
   background-position: end;
   position: absolute;
-  margin-left: 37%;
+  margin-left: 40%;
   top: 30%;
   height: 70%;
   box-shadow: #4400ff 0px -7px 15px;
@@ -418,7 +419,8 @@ body {
     }
     .d_block{
       display: block;
-      height: 60px;
+      z-index: 15;
+      height: 70px;
     }
     .navbar{
       height: 40px;
@@ -553,7 +555,7 @@ body {
 }
 @media screen and (max-width:600px) {
   .h1_header{
-    font-size: 30px;
+    font-size: 45px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -567,6 +569,10 @@ body {
     left: 0px;
     border-radius: 1px;
     display: none;
+  }
+  .banner1_text{
+    backdrop-filter: blur(0px);
+
   }
   .btn_holder{
     flex-direction: column;
@@ -611,25 +617,24 @@ body {
 @media screen and (max-width:440px){
   .btn_holder{
     flex-direction: column;
+    margin: 0 auto;
+    margin-left: 10px;
   }
   .h1_header{
-    font-size: 24px;
-    width: 250px;
+    font-size: 27px;
+    width: 200px;
     text-align: center;
     margin: 0 auto;
-    margin-left: -20px;
+    margin-left: -30px;
   }
   .p_header{
     font-size: 12px;
     width: 200px;
   }
-  .btn_holder{
-    margin-left: 20px;
-  }
   .btn_holder button{
-    width: 170px;
+    width: 120px;
     height: 40px;
-    font-size: 12px;
+    font-size: 10px;
     padding: 2px;
   }
 }
