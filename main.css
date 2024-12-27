@@ -72,10 +72,10 @@ body {
   z-index: 1;
   background-position: end;
   position: absolute;
-  margin-left: 40%;
+  margin-left: 37%;
   top: 30%;
   height: 70%;
-  box-shadow: #4400ff 0px 5px 15px;
+  box-shadow: #4400ff 0px -7px 15px;
   border-radius: 10px 0 0 0;
 }
 
@@ -566,7 +566,7 @@ body {
     top: 600px;
     left: 0px;
     border-radius: 1px;
-    /* display: none; */
+    display: none;
   }
   .btn_holder{
     flex-direction: column;
