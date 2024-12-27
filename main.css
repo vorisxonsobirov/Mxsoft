@@ -16,26 +16,7 @@
 .MXSOFT{
   color: #1C0066;
 }
-.h1_header{
-  font-weight: 800;
-  display: flex;
-  font-size: 60px;
-  justify-content: center;
-  color: white;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 20px;
-}
-.p_header{
-  font-weight: 500;
-  display: flex;
-  font-size: 25px;
-  justify-content: center;
-  color: white;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 50px;
-}
+
 body {
   margin: 0;
   padding: 0;
@@ -44,11 +25,92 @@ body {
   box-sizing: border-box;
   overflow-x: hidden; /* Убираем горизонтальный скролл */
   font-family: "Lato", serif;
-  /* background-color: #1A0063; */
   margin: 0 auto;
-  /* display: flex; */
-  /* justify-content: center; */
 }
+.h1_header {
+  font-weight: 800;
+  font-size: 50px;
+  color: white;
+}
+
+.p_header {
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+}
+
+.banner1 {
+  display: flex; /* Горизонтальное выравнивание текст и картинки */
+  justify-content: space-between; /* Разделить текст и картинку */
+  align-items: center; /* Вертикальное выравнивание по центру */
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #1C0066;
+  padding: 0 50px; /* Добавляем отступы по бокам */
+  background-image: url(./images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  background-attachment: fixed;
+}
+
+.banner1_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Выравнивание текста по левому краю */
+  justify-content: center;
+  width: 50%; /* Половина экрана для текста */
+}
+
+.img_banner1 {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 80%; /* Половина экрана для картинки */
+  position: relative;
+  filter: brightness(0.9); /* Затемняет картинку */
+  position: absolute;
+  left: 22%;
+  top: 23%;
+  /* position: fixed; */
+  z-index: 10;
+}
+
+.img_banner1 img {
+  border-radius: 30px 0px 0px 0px;
+  box-shadow: 0px -5px 45px -7px #4400ff;
+  width: 800px; /* Адаптивная ширина */
+  height: 500px; /* Сохранение пропорций */
+  object-fit: cover;
+  z-index: 10;
+ 
+}
+
+
+
+
+.btn_holder {
+  display: flex;
+  gap: 20px; /* Пространство между кнопками */
+  margin-top: 20px;
+}
+
+.btn_holder button {
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s all;
+}
+
+.btn_holder button:hover {
+  transform: scale(1.1);
+  background-color: #4400ff;
+  color: white;
+}
+
+
 
 
 
@@ -105,26 +167,7 @@ body {
   align-items: center;
 }
 
-.btn_holder{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: center;
-  margin-top: 50px;
-}
-.btn_holder button{
-  width: 250px;
-  height: 60px;
-  border-radius: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  transition: 0.2s all;
-}
-.btn_holder button:hover{
- transform: scale(1.1);
- background-color: #4400ff;
- color: white;
-}
+
 
 /* .about_right{
   border: 1px solid #1C0066;
@@ -177,17 +220,7 @@ body {
   color: white;
   transform: scale(1.1);
 }
-/* .img_crm{
-  width: 500px;
-  height: 500px;
-}
-.about_right{
-  width: 500px;
-  height: 500px;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-} */
+
 
 .sponsor-wrapper {
   overflow: hidden; /* Скрываем всё, что выходит за пределы контейнера */
@@ -270,14 +303,7 @@ body {
 }
   
 
-  .banner_main{
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 100vh;
-  filter: brightness(1.1);
-}
+
 
 
 
