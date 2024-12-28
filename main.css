@@ -707,6 +707,15 @@ body {
     margin: 0 auto;
     margin-left: 10px;
   }
+  .banner1_text{
+    width: 80%;
+  }
+  .title{
+    width: 250px;
+  }
+  .subtitle{
+    width: 250px;
+  }
   .h1_header{
     font-size: 27px;
     width: 200px;
