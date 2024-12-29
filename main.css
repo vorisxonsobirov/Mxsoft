@@ -15,6 +15,7 @@
 }
 .MXSOFT{
   color: #1C0066;
+  /* margin-top: -150px; */
 }
 
 body {
@@ -354,12 +355,32 @@ body {
 
 
 
+.titlepage span{
+  font-weight: 800;
+  margin-bottom: 100px;
+}
+.titlepage p{
+  padding: 1px 1px;
+  /* padding-top: -30px; */
+  height: 130px;
+  transition: 0.2s all;
+}
 
-  
+.titlepage p:hover{
+  background-color: #723fff;
+  color: white;
+}
+.d_flex_wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
   .nav__logo{
-    width: 140px;
-    height: 140px;
-    padding-top: 55px;
+    width: 150px;
+    margin-left: -20px;
+    height: 150px;
+    padding-top: 60px;
     align-items: center;
     /* display: flex; */
     /* justify-content: center; */
@@ -401,7 +422,7 @@ body {
   }
   
   .nav__menu__link{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 600;
     color: white;
     display: flex;
